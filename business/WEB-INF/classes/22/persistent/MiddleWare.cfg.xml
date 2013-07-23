@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB2312"?>
+<root>
+	<sql name="masInsertMt">
+		<![CDATA[insert into tbl_smsendtask(CreatorID,TaskName,SmSendedNum,OperationType,
+		SuboperationType,SendType,OrgAddr,DestAddr,SM_Content,NeedStateReport,ServiceID,
+		FeeType,FeeCode,MsgID,SMType,MessageID,DestAddrType,TaskStatus,SendLevel,SendState,
+		TryTimes,Count,SuccessID,sendtime,subtime) values('5111', ?,0,'WAS','66',
+		1,?,?,?,?,?,?,?,'',0,0,0,0,?,0,0,1,0,?, getdate())]]>
+	</sql>
+	<sql name="masSelectRpt">
+		<![CDATA[select  * from Tbl_Smresult_#date# where charindex(?,reserve2) > 0 ]]>
+	</sql>
+</root>

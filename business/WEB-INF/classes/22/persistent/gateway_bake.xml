@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<gateways> 
+  <cmpp30 id="7" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>上海MAS</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>1</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>127.0.0.1</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>7890</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>127.0.0.1</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>7890</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>100001</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>7</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>100001</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>100001</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>70</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>7000</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize>16</controlSize>  
+      <!-- 进程数 -->  
+      <countProcessor>1</countProcessor>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer>10240</sizeInBuffer>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer>1024</sizeOutBuffer>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime>10</connectIdleTime>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime>20</connectRepeatTime>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount>3</connectRepeatCount>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime>30</messageRepeatTime>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount>4</messageRepeatCount>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime>51</controlClearTime>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType>2</signType>  
+      <!-- 短信签名内容 -->  
+      <signMessage>(无线天利)</signMessage>  
+      <!-- 0 下行 1上行一般情况下填写0，当连接为亚信网关时，需要两条链接，才用到1的情况 -->  
+      <socketSymbol>0</socketSymbol>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType="1"> 
+          <!-- 普通短信长度 -->  
+          <smLength>70</smLength>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength>65</smSplitLength>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType>($m/$n)</smSplitType>  
+          <!-- 拆分总数 -->  
+          <splitCount>\$n</splitCount>  
+          <!-- 拆分序号 -->  
+          <splitIndex>\$m</splitIndex> 
+        </normalSplit>  
+        <longSplit splitType="1" headType7="false" smLastSplitCount="1"/> 
+      </smSplit> 
+    </extendData> 
+  </cmpp30>  
+  <cmpp20 id="1" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>12121</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>1</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>1.1.1.1</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>22</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>1.1.1.1</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>22</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>232</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>232</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>121</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>afdsa</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>22</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>232</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize>16</controlSize>  
+      <!-- 进程数 -->  
+      <countProcessor>1</countProcessor>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer>10240</sizeInBuffer>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer>1024</sizeOutBuffer>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime>10</connectIdleTime>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime>20</connectRepeatTime>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount>3</connectRepeatCount>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime>30</messageRepeatTime>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount>4</messageRepeatCount>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime>50</controlClearTime>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType>2</signType>  
+      <!-- 短信签名内容 -->  
+      <signMessage>null</signMessage>  
+      <!-- 该字段正常时和spid内容一致，但如国信等部分通道要求使用自己的编号，请自行配置内容 -->  
+      <msgSrc>100001</msgSrc>  
+      <!-- 0 下行 1上行一般情况下填写0，当连接为亚信网关时，需要两条链接，才用到1的情况 -->  
+      <socketSymbol>0</socketSymbol>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType="1"> 
+          <!-- 普通短信长度 -->  
+          <smLength>70</smLength>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength>65</smSplitLength>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType>($m/$n)</smSplitType>  
+          <!-- 拆分总数 -->  
+          <splitCount>\$n</splitCount>  
+          <!-- 拆分序号 -->  
+          <splitIndex>\$m</splitIndex> 
+        </normalSplit>  
+        <longSplit splitType="1" headType7="false" smLastSplitCount="1"/> 
+      </smSplit> 
+    </extendData> 
+  </cmpp20>  
+  <mas id="10" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>四川全网移动通道</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>1</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>123.123.123.123</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>1</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>123.123.123.123</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>1</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>1</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>123</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>1</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>1</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>1</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>1</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <jdbcUrl>jdbc:jtds:sqlserver://192.168.4.88:1433/DB_CustomSMS</jdbcUrl>  
+      <seqIdPrefix>tl</seqIdPrefix>  
+      <srcClientID>0</srcClientID>  
+      <!-- Rpt处理开始时间 -->  
+      <beginTime>17:52</beginTime>  
+      <!-- Mt批处理的个数 -->  
+      <mtSize>1000</mtSize>  
+      <mtWaitTime>2000</mtWaitTime>  
+      <!-- Mt批处理所需时间，超过这个时间没有达到处理的个数也进行下面的操作 -->  
+      <mtMaxTime>1</mtMaxTime>  
+      <moSize>1000</moSize>  
+      <moWaitTime>1000</moWaitTime>  
+      <beforeDay/> 
+    </extendData> 
+  </mas>  
+  <cmpp30 id="1" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>广东移动</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>1</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>127.0.0.1</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>7890</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>127.0.0.1</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>7890</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>100001</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>100001</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>100001</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>100001</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>10</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>10000</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize>16</controlSize>  
+      <!-- 进程数 -->  
+      <countProcessor>1</countProcessor>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer>10240</sizeInBuffer>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer>1024</sizeOutBuffer>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime>10</connectIdleTime>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime>20</connectRepeatTime>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount>3</connectRepeatCount>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime>30</messageRepeatTime>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount>4</messageRepeatCount>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime>50</controlClearTime>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType>2</signType>  
+      <!-- 短信签名内容 -->  
+      <signMessage/>  
+      <!-- 0 下行 1上行一般情况下填写0，当连接为亚信网关时，需要两条链接，才用到1的情况 -->  
+      <socketSymbol>0</socketSymbol>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType="1"> 
+          <!-- 普通短信长度 -->  
+          <smLength>70</smLength>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength>65</smSplitLength>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType>($m/$n)</smSplitType>  
+          <!-- 拆分总数 -->  
+          <splitCount>\$n</splitCount>  
+          <!-- 拆分序号 -->  
+          <splitIndex>\$m</splitIndex> 
+        </normalSplit>  
+        <longSplit splitType="1" headType7="false" smLastSplitCount="1"/> 
+      </smSplit> 
+    </extendData> 
+  </cmpp30>  
+  <sgip id="2" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>深圳联通</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>1</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>127.0.0.1</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>9002</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>127.0.0.1</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>9012</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>100020</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>2</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>admin</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>111</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>20</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>20</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize>16</controlSize>  
+      <!-- 进程数 -->  
+      <countProcessor>1</countProcessor>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer>10240</sizeInBuffer>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer>1024</sizeOutBuffer>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime>10</connectIdleTime>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime>20</connectRepeatTime>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount>3</connectRepeatCount>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime>30</messageRepeatTime>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount>4</messageRepeatCount>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime>99</controlClearTime>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType>2</signType>  
+      <!-- 短信签名内容 -->  
+      <signMessage/>  
+      <!-- 节点ID -->  
+      <nodeID>30000</nodeID>  
+      <!-- 付费号码 -->  
+      <chargeNumber>000000000000000000000</chargeNumber>  
+      <!-- 登录类型 默认填写1 -->  
+      <socketSymbol>0</socketSymbol>  
+      <!-- MO网关用户名 -->  
+      <moSpUserName>100001</moSpUserName>  
+      <!-- MO网关密码 -->  
+      <moSpPassWord>100001</moSpPassWord>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType="1"> 
+          <!-- 普通短信长度 -->  
+          <smLength>70</smLength>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength>65</smSplitLength>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType>($m/$n)</smSplitType>  
+          <!-- 拆分总数 -->  
+          <splitCount>\$n</splitCount>  
+          <!-- 拆分序号 -->  
+          <splitIndex>\$m</splitIndex> 
+        </normalSplit>  
+        <longSplit splitType="1" headType7="false" smLastSplitCount="1"/> 
+      </smSplit> 
+    </extendData> 
+  </sgip>  
+  <smgp id="8" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>上海电信通道</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>1</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>123.123.123.123</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>1</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>123.123.123.123</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>1</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>1</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>10086</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>mas</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>mas</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>1</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>1</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize>16</controlSize>  
+      <!-- 进程数 -->  
+      <countProcessor>1</countProcessor>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer>10240</sizeInBuffer>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer>1024</sizeOutBuffer>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime>10</connectIdleTime>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime>20</connectRepeatTime>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount>3</connectRepeatCount>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime>30</messageRepeatTime>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount>4</messageRepeatCount>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime>50</controlClearTime>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType>2</signType>  
+      <!-- 短信签名内容 -->  
+      <signMessage/>  
+      <!--客户端支持的版本号 -->  
+      <socketVersion>19</socketVersion>  
+      <!-- smgp协议需要配置loginMode -->  
+      <loginMode>2</loginMode>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType="1"> 
+          <!-- 普通短信长度 -->  
+          <smLength>70</smLength>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength>65</smSplitLength>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType>($m/$n)</smSplitType>  
+          <!-- 拆分总数 -->  
+          <splitCount>\$n</splitCount>  
+          <!-- 拆分序号 -->  
+          <splitIndex>\$m</splitIndex> 
+        </normalSplit>  
+        <longSplit splitType="1" headType7="false" smLastSplitCount="1"/> 
+      </smSplit> 
+    </extendData> 
+  </smgp>  
+  <mas id="5" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>北京MAS通道</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>1</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>127.0.0.1</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>9006</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>127.0.0.1</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>9016</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>100060</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>6</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>admin</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>111</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>60</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>60</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <jdbcUrl>jdbc:jtds:sqlserver://192.168.4.88:1433/DB_CustomSMS</jdbcUrl>  
+      <seqIdPrefix>tl</seqIdPrefix>  
+      <srcClientID>0</srcClientID>  
+      <!-- Rpt处理开始时间 -->  
+      <beginTime>17:52</beginTime>  
+      <!-- Mt批处理的个数 -->  
+      <mtSize>1000</mtSize>  
+      <mtWaitTime>3000</mtWaitTime>  
+      <!-- Mt批处理所需时间，超过这个时间没有达到处理的个数也进行下面的操作 -->  
+      <mtMaxTime>1</mtMaxTime>  
+      <moSize>1000</moSize>  
+      <moWaitTime>1000</moWaitTime>  
+      <beforeDay>2</beforeDay> 
+    </extendData> 
+  </mas>  
+  <mas id="6" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>四川省网移动通道</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>1</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>127.0.0.1</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>9007</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>127.0.0.1</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>9017</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>100070</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>7</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>admin</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>111</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>70</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>70</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <jdbcUrl>jdbc:jtds:sqlserver://192.168.4.88:1433/DB_CustomSMS</jdbcUrl>  
+      <seqIdPrefix>tl</seqIdPrefix>  
+      <srcClientID>0</srcClientID>  
+      <!-- Rpt处理开始时间 -->  
+      <beginTime>17:52</beginTime>  
+      <!-- Mt批处理的个数 -->  
+      <mtSize>1000</mtSize>  
+      <mtWaitTime>2000</mtWaitTime>  
+      <!-- Mt批处理所需时间，超过这个时间没有达到处理的个数也进行下面的操作 -->  
+      <mtMaxTime>1</mtMaxTime>  
+      <moSize>1000</moSize>  
+      <moWaitTime>1000</moWaitTime>  
+      <beforeDay/> 
+    </extendData> 
+  </mas>  
+  <sgip id="9" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>上海联通行业短信通道</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>1</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>123.123.123.123</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>1</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>123.123.123.123</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>1</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>123</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>123</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>123</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>1</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>1</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>123</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize>16</controlSize>  
+      <!-- 进程数 -->  
+      <countProcessor>1</countProcessor>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer>10240</sizeInBuffer>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer>1024</sizeOutBuffer>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime>10</connectIdleTime>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime>20</connectRepeatTime>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount>3</connectRepeatCount>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime>30</messageRepeatTime>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount>4</messageRepeatCount>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime>50</controlClearTime>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType>2</signType>  
+      <!-- 短信签名内容 -->  
+      <signMessage/>  
+      <!-- 节点ID -->  
+      <nodeID>30000</nodeID>  
+      <!-- 付费号码 -->  
+      <chargeNumber>000000000000000000000</chargeNumber>  
+      <!-- 登录类型 默认填写1 -->  
+      <socketSymbol>0</socketSymbol>  
+      <!-- MO网关用户名 -->  
+      <moSpUserName>100001</moSpUserName>  
+      <!-- MO网关密码 -->  
+      <moSpPassWord>100001</moSpPassWord>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType="1"> 
+          <!-- 普通短信长度 -->  
+          <smLength>70</smLength>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength>65</smSplitLength>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType>($m/$n)</smSplitType>  
+          <!-- 拆分总数 -->  
+          <splitCount>\$n</splitCount>  
+          <!-- 拆分序号 -->  
+          <splitIndex>\$m</splitIndex> 
+        </normalSplit>  
+        <longSplit splitType="1" headType7="false" smLastSplitCount="1"/> 
+      </smSplit> 
+    </extendData> 
+  </sgip>  
+  <cbip id="11" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>统付移动通道</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>1</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>192.168.3.14</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>1236</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>192.168.3.14</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>1236</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>1</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>1</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>1001</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>1001</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>1</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>1</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize>16</controlSize>  
+      <!-- 进程数 -->  
+      <countProcessor>1</countProcessor>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer>10240</sizeInBuffer>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer>1024</sizeOutBuffer>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime>10</connectIdleTime>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime>20</connectRepeatTime>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount>3</connectRepeatCount>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime>30</messageRepeatTime>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount>4</messageRepeatCount>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime>50</controlClearTime>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType>2</signType>  
+      <!-- 短信签名内容 -->  
+      <signMessage/>  
+      <!-- 客户端ID -->  
+      <clientId>1001</clientId>  
+      <!-- 是否加密 -->  
+      <security>false</security>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType="1"> 
+          <!-- 普通短信长度 -->  
+          <smLength>70</smLength>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength>65</smSplitLength>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType>($m/$n)</smSplitType>  
+          <!-- 拆分总数 -->  
+          <splitCount>\$n</splitCount>  
+          <!-- 拆分序号 -->  
+          <splitIndex>\$m</splitIndex> 
+        </normalSplit>  
+        <longSplit splitType="1" headType7="false" smLastSplitCount="1"/> 
+      </smSplit> 
+    </extendData> 
+  </cbip>  
+  <empp id="12" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>上海企信通通道(国金期货)</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>4</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>127.0.0.1</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>7890</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>127.0.0.1</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>7890</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>10001</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>123</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>10001</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>7890</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>7890</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>1000</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize>16</controlSize>  
+      <!-- 进程数 -->  
+      <countProcessor>1</countProcessor>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer>10240</sizeInBuffer>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer>1024</sizeOutBuffer>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime>10</connectIdleTime>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime>20</connectRepeatTime>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount>3</connectRepeatCount>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime>30</messageRepeatTime>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount>4</messageRepeatCount>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime>51</controlClearTime>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType>2</signType>  
+      <!-- 短信签名内容 -->  
+      <signMessage/>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType="1"> 
+          <!-- 普通短信长度 -->  
+          <smLength>70</smLength>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength>65</smSplitLength>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType>($m/$n)</smSplitType>  
+          <!-- 拆分总数 -->  
+          <splitCount>\$n</splitCount>  
+          <!-- 拆分序号 -->  
+          <splitIndex>\$m</splitIndex> 
+        </normalSplit>  
+        <longSplit splitType="1" headType7="false" smLastSplitCount="1"/> 
+      </smSplit> 
+    </extendData> 
+  </empp>  
+  <empp id="4" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>上海企信通全网通道</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>3</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>127.0.0.1</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>8890</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>127.0.0.1</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>8890</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>100040</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>4</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>admin</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>111</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>40</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>40</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize/>  
+      <!-- 进程数 -->  
+      <countProcessor/>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer/>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer/>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime/>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime/>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount/>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime/>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount/>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime/>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType/>  
+      <!-- 短信签名内容 -->  
+      <signMessage/>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType=""> 
+          <!-- 普通短信长度 -->  
+          <smLength/>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength/>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType/>  
+          <!-- 拆分总数 -->  
+          <splitCount/>  
+          <!-- 拆分序号 -->  
+          <splitIndex/> 
+        </normalSplit>  
+        <longSplit splitType="" headType7="" smLastSplitCount=""/> 
+      </smSplit> 
+    </extendData> 
+  </empp>  
+  <smgp id="3" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>深圳电信</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>2</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>127.0.0.1</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>9003</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>127.0.0.1</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>9013</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>100030</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>3</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>admin</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>111</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>30</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>30</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize>16</controlSize>  
+      <!-- 进程数 -->  
+      <countProcessor>1</countProcessor>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer>10240</sizeInBuffer>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer>1024</sizeOutBuffer>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime>10</connectIdleTime>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime>20</connectRepeatTime>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount>3</connectRepeatCount>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime>30</messageRepeatTime>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount>4</messageRepeatCount>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime>50</controlClearTime>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType>2</signType>  
+      <!-- 短信签名内容 -->  
+      <signMessage/>  
+      <!--客户端支持的版本号 -->  
+      <socketVersion>19</socketVersion>  
+      <!-- smgp协议需要配置loginMode -->  
+      <loginMode>2</loginMode>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType="1"> 
+          <!-- 普通短信长度 -->  
+          <smLength>70</smLength>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength>65</smSplitLength>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType>($m/$n)</smSplitType>  
+          <!-- 拆分总数 -->  
+          <splitCount>\$n</splitCount>  
+          <!-- 拆分序号 -->  
+          <splitIndex>\$m</splitIndex> 
+        </normalSplit>  
+        <longSplit splitType="1" headType7="false" smLastSplitCount="1"/> 
+      </smSplit> 
+    </extendData> 
+  </smgp>  
+  <cmpp30 id="2322" type="1"> 
+    <operatorConfig> 
+      <!-- 网关名称 -->  
+      <gatewayName>3434</gatewayName>  
+      <!-- 运营商编号 -->  
+      <operatorId>3</operatorId>  
+      <!-- IP地址 -->  
+      <serverIP>1.1.1.1</serverIP>  
+      <!-- 端口 -->  
+      <serverPort>22</serverPort>  
+      <!-- mo IP地址 -->  
+      <moServerIP>1.1.1.1</moServerIP>  
+      <!-- mo端口 -->  
+      <moServerPort>22</moServerPort>  
+      <!-- 网关企业代码 -->  
+      <spID>22</spID>  
+      <!-- 网关服务代码 -->  
+      <spNumber>11</spNumber>  
+      <!-- 用户名 -->  
+      <spUserName>222</spUserName>  
+      <!-- 密码 -->  
+      <spPassWord>22</spPassWord>  
+      <!-- 批次手机号码数量 -->  
+      <numGroupMemberMax>11</numGroupMemberMax>  
+      <!-- 流速控制 -->  
+      <speeder>22</speeder> 
+    </operatorConfig>  
+    <extendData> 
+      <!-- 滑动窗口大小 -->  
+      <controlSize>16</controlSize>  
+      <!-- 进程数 -->  
+      <countProcessor>1</countProcessor>  
+      <!-- 协议入口缓冲区大小 -->  
+      <sizeInBuffer>10240</sizeInBuffer>  
+      <!-- 协议出口缓冲区大小 -->  
+      <sizeOutBuffer>1024</sizeOutBuffer>  
+      <!--协议连接无反馈重试时间，单位秒 -->  
+      <connectIdleTime>10</connectIdleTime>  
+      <!--协议连接失败的重试时间，单位秒 -->  
+      <connectRepeatTime>20</connectRepeatTime>  
+      <!--协议连接失败的重试次数 -->  
+      <connectRepeatCount>3</connectRepeatCount>  
+      <!--信息发送失败的重试时间，单位秒 保留目前未启用 -->  
+      <messageRepeatTime>30</messageRepeatTime>  
+      <!--信息发送失败的重试次数 保留目前未启用 -->  
+      <messageRepeatCount>4</messageRepeatCount>  
+      <!--协议滑动窗口清理时间 -->  
+      <controlClearTime>50</controlClearTime>  
+      <!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->  
+      <signType>2</signType>  
+      <!-- 短信签名内容 -->  
+      <signMessage>null</signMessage>  
+      <!-- 0 下行 1上行一般情况下填写0，当连接为亚信网关时，需要两条链接，才用到1的情况 -->  
+      <socketSymbol>0</socketSymbol>  
+      <smSplit> 
+        <!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->  
+        <normalSplit splitType="1"> 
+          <!-- 普通短信长度 -->  
+          <smLength>70</smLength>  
+          <!-- 拆分短信长度 -->  
+          <smSplitLength>65</smSplitLength>  
+          <!-- 拆分内容的形式如:(1/2) -->  
+          <smSplitType>($m/$n)</smSplitType>  
+          <!-- 拆分总数 -->  
+          <splitCount>\$n</splitCount>  
+          <!-- 拆分序号 -->  
+          <splitIndex>\$m</splitIndex> 
+        </normalSplit>  
+        <longSplit splitType="1" headType7="false" smLastSplitCount="1"/> 
+      </smSplit> 
+    </extendData> 
+  </cmpp30> 
+</gateways>

@@ -1,0 +1,1 @@
+<smil><head><layout><root-layout width="128" height="128" /><region id="image" width="128" height="128" left="0" top="0" /><region id="text" width="128" height="128" left="0" top="0" /></layout></head><body><par dur="5s"><img src="20121108102212_5788.png" region="image" /><text src="20121108102212_7737.txt" region="text" /></par></body></smil>
