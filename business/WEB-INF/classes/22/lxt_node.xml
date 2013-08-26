@@ -35,7 +35,7 @@
 				<!--<entry key="902" value-ref="business_task_ftp" />-->
 				<entry key="990" value-ref="business_task_customeroperate" />
 				<entry key="991" value-ref="business_task_blackwhitelistoperate" />
-				<entry key="966" value-ref="business_task_prepaidoperate" />
+			        <!-- <entry key="966" value-ref="business_task_prepaidoperate" /> -->
 				<!-- <entry key="992" value-ref="business_task_whitelisterror" /> -->
 				<!-- <entry key="801" value-ref="collectTask" /> -->
 				<!-- <entry key="802" value-ref="alertTask" /> -->
