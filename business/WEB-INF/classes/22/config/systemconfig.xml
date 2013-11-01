@@ -818,6 +818,14 @@
                                                 <type>MTS</type>
                                                 <config></config>
                                         </function>
+					 <function>
+
+                                                <id>3552</id>
+                                                <name>mtsGatewayModule5452</name>
+                                                <bean>mtsGatewayModule5452</bean>
+                                                <type>MTS</type>
+                                                <config></config>
+                                        </function>
                                           <function>
 
                                                 <id>3564</id>
@@ -1148,6 +1156,13 @@
                                 <type>MTS</type>
                                 <config></config>
                         </function>
+                        <function>
+				<id>3666</id>
+				<name>mtsGatewayModule3666</name>
+				<bean>mtsGatewayModule3666</bean>
+				<type>MTS</type>
+				<config></config>
+			</function>
 		</moduleList>
 		<!-- 功能模块 -->
 		<functionModuleList>
